@@ -21,6 +21,6 @@ func StreamServerInterceptor() grpc.StreamServerInterceptor {
 func UnaryServerInterceptor() grpc.UnaryServerInterceptor {
 	return otelgrpc.UnaryServerInterceptor()
 }
-func NewClientHandler(opts otelgrpc.Option) stats.Handler {
-	return otelgrpc.NewClientHandler(opts)
+func NewClientHandler() stats.Handler {
+	return otelgrpc.NewClientHandler()
 }
